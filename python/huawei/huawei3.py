@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import json
-import requests
+
 from HttpRequest import HttpRequests
 headers = {"content-type": "application/json"}
 url = "https://iam.cn-north-4.myhuaweicloud.com/v3/auth/tokens"

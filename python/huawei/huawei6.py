@@ -60,10 +60,11 @@ def get_iam_token():
                 }
             }
         }
+        global headers
         token_req = HttpRequests(take_url, data=json.dumps(data),
-        type="POST", headers =take_headers)
+        type="POST", headers =headers)
         token_info = {
-                "token": req.get_headers()["X-Subject-Token"],
+                "token": token_req.get_headers()["X-Subject-Token"],
                 "project_id": "cn-north-4",
                 "expires_at": "expires_timestamp"
             }
@@ -89,11 +90,23 @@ def peom(peom_type= "0",acrostic=True,peom_tile = str):
     #peom_result = d["peom"]
     #return peom_result
 
+def sentiment():
+    sent_data={"conten": "你好啊"}
+    sent_url="https://nlp-ext.cn-north-4.myhuaweicloud.com/v1/0629bb1a768026c42fffc00e25759f39/nlu/sentiment"
+    sent_req= HttpRequests(sent_url, data=json.dumps(sent_data),
+    type="POST", headers =headers)
+    a = sent_req.get_text()
+    d = json.loads(a,encoding='utf-8')
+    #print(headers)
+    print(d)
+
+
 
 if __name__ == "__main__":
     get_iam_token()
-    result=peom(peom_tile="春天")
-    print(result)
+    #result=peom(peom_tile="春天")
+    sentiment()
+    #print(result)
     
 
 

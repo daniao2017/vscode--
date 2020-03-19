@@ -1,4 +1,4 @@
-#include<stdio.h>;
+#include<stdio.h>
 void Shift(int  Array[],int N);
 #define MAXN 100
 int main(){
