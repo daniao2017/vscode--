@@ -1,4 +1,6 @@
-void setup() {
+
+void setup() 
+{
   pinMode(A5,INPUT);   //设置引脚 A5 为输出模式
   Serial.begin(57600); //设置波特率为9600
 }
