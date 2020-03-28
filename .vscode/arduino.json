@@ -1,5 +1,8 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "AVR ISP",
-    "sketch": "touch1.ino"
+    "port": "/dev/ttyUSB0",
+    "output": "../build",
+
+    "sketch": "arduino/joy_2/joy_2.ino"
 }

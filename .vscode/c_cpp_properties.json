@@ -6,7 +6,10 @@
                 "/opt/arduino-1.8.12/tools/**",
                 "/opt/arduino-1.8.12/hardware/arduino/avr/**",
                 "/opt/arduino-1.8.12/libraries/**",
-                "/opt/arduino-1.8.12/hardware/tools/avr/avr/include"
+                "/home/danoao/Arduino/libraries",
+                "/opt/arduino-1.8.12/hardware/tools/avr/avr/include",
+                "/home/danoao/.arduino15/packages/esp8266/tools/**",
+                "/home/danoao/.arduino15/packages/esp8266/hardware/esp8266/2.5.0/**"
             ],
             "forcedInclude": [
                 "/opt/arduino-1.8.12/hardware/arduino/avr/cores/arduino/Arduino.h"
