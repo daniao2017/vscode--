@@ -6,23 +6,31 @@
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
 ----------------------------*/
-
+/*---------------------程序部分------------------*/
 #include <stdlib.h>
 #include <stdio.h>
-//int *twoSum(int * nums,int numsSize,int target,int *returnSize);
+int *twoSum(int * nums,int numsSize,int target,int *returnSize);
 
+//接口实现部分
 void main() {
-    //nums = [2, 7, 11, 15];
-    //int target = 9;
-    //int *returnSize = 2;
-    //test = twoSum(nums,4,target,2);
-    printf("hello world\n");
+    int nums[4] = {2,7,11,15};
+    int target = 9;
+    int a[1] = {2};
+    int *test ;
+    test = twoSum(nums,4,target,a);
+    printf("result,%d%d\n",test[0],test[1]);
 }
 
+/*------------------------------算法实现-----------------*/
+//暴力破解
 int *twoSum(int * nums,int numsSize,int target,int *returnSize){
+    
     for(int i =0;i<numsSize;++i){
-        for(int j= j+1;j<numsSize;++j){
+        //printf("%d\n",i);
+        //printf("%d\n",nums[i]);
+        for(int j= i+1;j<numsSize;++j){
             if(nums[i]+nums[j]==target){
+                //printf("ok\n");
                 int* ret =malloc(sizeof(int)*2);
                 ret[0]=i,ret[1]=j;
                 *returnSize = 2;
@@ -33,3 +41,5 @@ int *twoSum(int * nums,int numsSize,int target,int *returnSize){
     *returnSize = 0;
     return NULL;
 }
+
+
