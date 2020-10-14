@@ -26,11 +26,11 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: SSH Remote Commands
-      uses: appleboy/ssh-action@v0.1.2
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
+        key: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: cd /root && tounch test.txt
 
